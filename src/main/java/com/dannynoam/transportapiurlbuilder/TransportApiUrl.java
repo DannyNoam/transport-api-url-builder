@@ -10,7 +10,7 @@ public class TransportApiUrl {
         return new Builder(new StringBuilder(TRANSPORT_API_BASE_URL));
     }
 
-    private static class Builder {
+    public static class Builder {
         private final StringBuilder apiUrl;
 
         private Builder(StringBuilder apiUrl) {

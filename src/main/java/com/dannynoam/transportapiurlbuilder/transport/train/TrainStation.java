@@ -2,7 +2,7 @@ package com.dannynoam.transportapiurlbuilder.transport.train;
 
 import com.dannynoam.transportapiurlbuilder.transport.Timetable;
 
-public class Station {
+public class TrainStation {
 
     public static Builder builder(StringBuilder apiUrl) {
         return new Builder(apiUrl);
@@ -21,16 +21,6 @@ public class Station {
 
         public Timetable.Builder withTimetable() {
             return new Timetable.Builder(apiUrl);
-        }
-    }
-
-    public enum Type {
-        NEAR("near.json"), BBOX("bbox.json");
-
-        private String uri;
-
-        Type(String uri) {
-            this.uri = uri;
         }
     }
 }

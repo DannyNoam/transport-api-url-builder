@@ -2,7 +2,7 @@ package com.dannynoam.transportapiurlbuilder.transport.train;
 
 import com.dannynoam.transportapiurlbuilder.transport.Timetable;
 
-public class Service {
+public class TrainService {
 
     public static Builder builder(StringBuilder apiUrl) {
         return new Builder(apiUrl);

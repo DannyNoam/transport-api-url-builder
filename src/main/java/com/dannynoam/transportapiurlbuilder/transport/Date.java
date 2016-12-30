@@ -1,6 +1,7 @@
 package com.dannynoam.transportapiurlbuilder.transport;
 
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Date {
 
@@ -13,7 +14,7 @@ public class Date {
         }
 
         public Time.Builder withTime(LocalTime time) {
-            return new Time.Builder(apiUrl.append("/" + time.toString()));
+            return new Time.Builder(apiUrl.append("/" + time.format(DateTimeFormatter.ofPattern("H:m"))));
         }
     }
 }

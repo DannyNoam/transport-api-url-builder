@@ -1,6 +1,7 @@
 package com.dannynoam.transportapiurlbuilder.transport;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Timetable {
 
@@ -13,7 +14,7 @@ public class Timetable {
         }
 
         public Date.Builder withDate(LocalDate date) {
-            return new Date.Builder(apiUrl.append("/" + date.toString()));
+            return new Date.Builder(apiUrl.append("/" + date.format(DateTimeFormatter.ISO_DATE)));
         }
     }
 }

@@ -1,5 +1,8 @@
 package com.dannynoam.transportapiurlbuilder.transport;
 
+import com.dannynoam.transportapiurlbuilder.AppId;
+import com.dannynoam.transportapiurlbuilder.transport.train.TrainQueryParameters;
+
 public class Time {
 
     public static class Builder {
@@ -10,8 +13,8 @@ public class Time {
             this.apiUrl = apiUrl;
         }
 
-        public String withTimetable() {
-            return apiUrl.append("/timetable.json").toString();
+        public AppId withTimetable() {
+            return new TrainQueryParameters().builder(apiUrl);
         }
     }
 }

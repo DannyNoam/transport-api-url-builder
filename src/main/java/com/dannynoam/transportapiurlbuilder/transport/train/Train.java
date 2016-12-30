@@ -13,16 +13,16 @@ public class Train {
             this.apiUrl = apiUrl;
         }
 
-        public Station.Builder withStation(String stationCode) {
-            return Station.builder(apiUrl.append("/station/" + stationCode));
+        public TrainStation.Builder withStation(String stationCode) {
+            return TrainStation.builder(apiUrl.append("/station/" + stationCode));
         }
 
-        public Service.Builder withService(String service) {
-            return Service.builder(apiUrl.append("/service/" + service));
+        public TrainService.Builder withService(String service) {
+            return TrainService.builder(apiUrl.append("/service/" + service));
         }
 
-        public String withStations(Station.Type stationType) {
-            return apiUrl.append(stationType.toString()).toString();
+        public String withStations(TrainStationType stationType) {
+            return apiUrl.append("/stations/" + stationType.toString()).toString();
         }
     }
 }
